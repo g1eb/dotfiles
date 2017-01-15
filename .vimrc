@@ -13,6 +13,9 @@ colorscheme Tomorrow-Night
 
 nnoremap ; :
 
+:command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --exclude=*.min.* --languages=-html,sql
+set tags+=.git/tags
+
 highlight TrailingWhitespace ctermbg=red guibg=red
 match TrailingWhitespace /\s\+$/
 autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
