@@ -1,0 +1,18 @@
+term screen-256color
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E38;5;%dm'
+defbce "on"
+altscreen on
+utf8 on
+
+# Initialize windows
+screen -t s0
+screen -t s1
+screen -t s2
+
+# Run tab specific commands
+select 1
+stuff "eval $(ssh-agent -s)^M"
+
+hardstatus alwayslastline
+hardstatus string '%{= kY}[ %{Y}%H %{Y}]%{= kY}[ %{Y}%S %{Y}][%= %{= kY}%?%-Lw%?%{Y}%{+b Y}%n*%f%t%?(%u)%?%{-b Y} %{Y}%?%+Lw%?%?%= %{Y}][%{Y} %d-%m-%Y %{Y}%c %{Y}]'
