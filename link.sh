@@ -2,6 +2,6 @@
 for file in .*
 do
   if [[ $file =~ ^.[^.] ]];
-    then ln -s "$file" "$HOME/$file";
+    then ln -s "$PWD/$file" "$HOME/$file";
   fi;
 done
