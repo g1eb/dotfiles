@@ -2,6 +2,7 @@ syntax on
 
 set ic
 set ruler
+set number
 set relativenumber
 set hlsearch
 set expandtab
