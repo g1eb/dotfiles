@@ -26,3 +26,5 @@ autocmd BufWinLeave * call clearmatches()
 
 filetype plugin indent on
 execute pathogen#infect()
+
+:command! Sprunge :!cat % | curl -F 'sprunge=<-' http://sprunge.us
