@@ -1,14 +1,18 @@
-term screen-256color
 attrcolor b ".I"
+term screen-256color
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E38;5;%dm'
-defbce "on"
+startup_message off
+defscrollback 1000
+autodetach on
 altscreen on
+defutf8 on
+defbce on
 utf8 on
 
-# Initialize windows
-screen -t s0
-screen -t s1
-screen -t s2
+# Initialize tabs
+screen -t screen-0
+screen -t screen-1
+screen -t screen-2
 
 # Run tab specific commands
 select 1
