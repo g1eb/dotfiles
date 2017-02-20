@@ -10,6 +10,8 @@ set path=$PWD/**
 set background=dark
 
 nnoremap ; :
+nnoremap .' ciw''<Esc>""P
+
 syntax on
 filetype plugin indent on
 colorscheme Tomorrow-Night
