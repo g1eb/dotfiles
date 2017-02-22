@@ -56,7 +56,7 @@ noremap <silent> <c-j> :call <SID>swap_down()<CR>
 :command! Sprunge :!cat % | curl -F 'sprunge=<-' http://sprunge.us
 
 " Run ctags and store tags in git folder
-:command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --exclude=*.min.* --languages=-html,sql
+:command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --exclude=*.min.* --languages=-javascript,html,sql
 set tags+=.git/tags
 
 " Add pathogen to runtime path
