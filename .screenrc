@@ -24,5 +24,10 @@ bind j focus down
 bind k focus up
 bind l focus right
 
+# Bind window resize controls
+bind = resize =
+bind - resize -1
+bind + resize +1
+
 hardstatus alwayslastline
 hardstatus string '%{= kY}[ %{Y}%H %{Y}]%{= kY}[ %{Y}%S %{Y}][%= %{= kY}%?%-Lw%?%{Y}%{+b Y}%n*%f%t%?(%u)%?%{-b Y} %{Y}%?%+Lw%?%?%= %{Y}][%{Y} %d-%m-%Y %{Y}%c %{Y}]'
