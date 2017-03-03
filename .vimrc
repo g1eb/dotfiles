@@ -8,6 +8,7 @@ set tabstop=2
 set shiftwidth=2
 set path=$PWD/**
 set background=dark
+set backspace=indent,eol,start
 
 nnoremap ; :
 nnoremap '' ciw''<Esc>""P
