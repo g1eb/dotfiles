@@ -60,5 +60,8 @@ noremap <silent> <c-j> :call <SID>swap_down()<CR>
 :command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --exclude=*.min.* --languages=-javascript,html,sql
 set tags+=.git/tags
 
+" Exclude folders when indexing with ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|git'
+
 " Add pathogen to runtime path
 execute pathogen#infect()
