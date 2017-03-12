@@ -15,7 +15,13 @@ nnoremap '' ciw''<Esc>""P
 
 syntax on
 filetype plugin indent on
-silent! colorscheme Tomorrow-Night
+
+" Set colorscheme
+try
+  colorscheme Tomorrow-Night
+catch /^Vim\%((\a\+)\)\=:E185/
+  colorscheme default
+endtry
 
 " Highlight trailing whitespace
 highlight TrailingWhitespace ctermbg=red guibg=red
