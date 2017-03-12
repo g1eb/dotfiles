@@ -64,4 +64,7 @@ set tags+=.git/tags
 let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|git'
 
 " Add pathogen to runtime path
-execute pathogen#infect()
+runtime! autoload/pathogen.vim
+if exists("*pathogen#infect")
+  execute pathogen#infect()
+endif
