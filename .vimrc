@@ -54,10 +54,10 @@ noremap <silent> <c-k> :call <SID>swap_up()<CR>
 noremap <silent> <c-j> :call <SID>swap_down()<CR>
 
 " Paste buffer to sprunge
-:command! Sprunge :!cat % | curl -F 'sprunge=<-' http://sprunge.us
+command! Sprunge :!cat % | curl -F 'sprunge=<-' http://sprunge.us
 
 " Run ctags and store tags in git folder
-:command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --exclude=*.min.* --languages=-javascript,html,sql
+command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --exclude=*.min.* --languages=-javascript,html,sql
 set tags+=.git/tags
 
 " Exclude folders when indexing with ctrlp
