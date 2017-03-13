@@ -15,6 +15,11 @@ HISTCONTROL=ignoreboth
 LS_COLORS=$LS_COLORS:'di=0;93:'; export LS_COLORS
 PS1="\\[$(tput setaf 11)\\]\\u@\\h:\\w $ \\[$(tput sgr0)\\]"
 
+# Virtualenv settings
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
 # Virtualenv aliases
 alias v='workon'
 alias v.d='deactivate'
