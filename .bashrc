@@ -1,7 +1,28 @@
+# Aliases
 alias ls='ls --color=auto'
 alias ll='ls -lash'
 alias grep='grep --color'
 
+# Default editor
 export EDITOR=vim
 
+# History
+HISTSIZE=1000
+HISTFILESIZE=2000
+HISTCONTROL=ignoreboth
+
+# Colorize term
 LS_COLORS=$LS_COLORS:'di=0;93:'; export LS_COLORS
+PS1="\\[$(tput setaf 11)\\]\\u@\\h:\\w $ \\[$(tput sgr0)\\]"
+
+# Virtualenv aliases
+alias v='workon'
+alias v.d='deactivate'
+alias v.mk='mkvirtualenv --no-site-packages'
+alias v.mk_withsitepackages='mkvirtualenv'
+alias v.rm='rmvirtualenv'
+alias v.switch='workon'
+alias v.add2virtualenv='add2virtualenv'
+alias v.cdsitepackages='cdsitepackages'
+alias v.cd='cdvirtualenv'
+alias v.lssitepackages='lssitepackages'
