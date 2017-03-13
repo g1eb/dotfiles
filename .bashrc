@@ -18,7 +18,7 @@ PS1="\\[$(tput setaf 11)\\]\\u@\\h:\\w $ \\[$(tput sgr0)\\]"
 # Virtualenv settings
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+vwrap=`/usr/bin/which 'virtualenvwrapper.sh'` && test -f $vwrap && source $vwrap
 
 # Virtualenv aliases
 alias v='workon'
