@@ -31,33 +31,17 @@ autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-" Swap lines up/down using ctrl-k/ctrl-j
-function! s:swap_lines(n1, n2)
-    let line1 = getline(a:n1)
-    let line2 = getline(a:n2)
-    call setline(a:n1, line2)
-    call setline(a:n2, line1)
+" Move (multiple) lines up with <ctrl+k>
+function! s:MoveLinesUp()
+  silent exe ':m .-' . (v:count1+1) . '<CR>=='
 endfunction
-function! s:swap_up()
-    let n = line('.')
-    if n == 1
-        return
-    endif
+nnoremap <silent> <c-k> :<c-u>call <SID>MoveLinesUp()<CR>
 
-    call s:swap_lines(n, n - 1)
-    exec n - 1
+" Move (multiple) lines down with <ctrl+j>
+function! s:MoveLinesDown()
+  silent exe ':m .+' . v:count1 . '<CR>=='
 endfunction
-function! s:swap_down()
-    let n = line('.')
-    if n == line('$')
-        return
-    endif
-
-    call s:swap_lines(n, n + 1)
-    exec n + 1
-endfunction
-noremap <silent> <c-k> :call <SID>swap_up()<CR>
-noremap <silent> <c-j> :call <SID>swap_down()<CR>
+nnoremap <silent> <c-j> :<c-u>call <SID>MoveLinesDown()<CR>
 
 " Paste buffer to sprunge
 command! Sprunge :!cat % | curl -F 'sprunge=<-' http://sprunge.us
