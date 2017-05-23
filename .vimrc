@@ -67,7 +67,7 @@ command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --
 set tags+=.git/tags
 
 " Exclude folders when indexing with ctrlp
-let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|lib\|git'
 
 " Add pathogen to runtime path
 runtime! autoload/pathogen.vim
