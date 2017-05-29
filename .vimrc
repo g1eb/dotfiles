@@ -33,14 +33,14 @@ autocmd BufWinLeave * call clearmatches()
 
 " Move (multiple) lines up with <ctrl+k>
 function! s:MoveLinesUp()
-  silent exe 'm .-' . (v:count1+1)
+  silent exe printf('m .-%d', v:count1+1)
   norm ==
 endfunction
 nnoremap <silent> <c-k> :<c-u>call <SID>MoveLinesUp()<CR>
 
 " Move (multiple) lines down with <ctrl+j>
 function! s:MoveLinesDown()
-  silent exe 'm .+' . v:count1
+  silent exe printf('m .+%d', v:count1)
   norm ==
 endfunction
 nnoremap <silent> <c-j> :<c-u>call <SID>MoveLinesDown()<CR>
