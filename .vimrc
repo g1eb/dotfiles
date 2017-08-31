@@ -12,6 +12,7 @@ set backspace=indent,eol,start
 
 nnoremap ; :
 nnoremap '' ciw''<Esc>""P
+nnoremap \\ ciw['']<Esc>h""P
 inoremap § <Esc>
 
 syntax on
