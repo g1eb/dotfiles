@@ -26,6 +26,9 @@ vnoremap § <Esc>
 syntax on
 filetype plugin indent on
 
+" Remove trailing space on write
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Set colorscheme
 try
   colorscheme Tomorrow-Night
