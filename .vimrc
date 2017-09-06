@@ -13,7 +13,11 @@ set backspace=indent,eol,start
 nnoremap ; :
 nnoremap '' ciw''<Esc>""P
 nnoremap \\ ciw['']<Esc>h""P
+
+" Map § key to <Esc>
+cnoremap § <Esc>
 inoremap § <Esc>
+vnoremap § <Esc>
 
 syntax on
 filetype plugin indent on
