@@ -14,6 +14,10 @@ nnoremap ; :
 nnoremap '' ciw''<Esc>""P
 nnoremap \\ ciw['']<Esc>h""P
 
+" Move through wrapped lines
+nnoremap j gj
+nnoremap k gk
+
 " Map § key to <Esc>
 cnoremap § <Esc>
 inoremap § <Esc>
