@@ -9,6 +9,9 @@ set shiftwidth=2
 set path=$PWD/**
 set background=dark
 set backspace=indent,eol,start
+set nowritebackup
+set noswapfile
+set nobackup
 
 nnoremap ; :
 nnoremap '' ciw''<Esc>""P
