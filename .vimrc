@@ -13,7 +13,10 @@ set backspace=indent,eol,start
 nnoremap ; :
 nnoremap '' ciw''<Esc>""P
 nnoremap \\ ciw['']<Esc>h""P
-nnoremap // :nohlsearch<CR>
+nnoremap // I//<Esc>
+
+" Clear search highlights
+nnoremap ,/ :nohlsearch<CR>
 
 " Move through wrapped lines
 nnoremap j gj
