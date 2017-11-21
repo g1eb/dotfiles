@@ -16,6 +16,8 @@ set nobackup
 nnoremap ; :
 vnoremap '' xi''<Esc>""P
 nnoremap '' ciw''<Esc>""P
+vnoremap `` xi``<Esc>""P
+nnoremap `` ciw``<Esc>""P
 nnoremap \\ ciw['']<Esc>h""P
 nnoremap // I//<Esc>
 
