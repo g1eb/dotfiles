@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+shopt -s extglob
+
 for file in $(ls -a1 | grep -P '^\.(?!git$|\.).+$')
 do
   err=$(ln -s "$PWD/$file" "$HOME/$file" 2>&1);
