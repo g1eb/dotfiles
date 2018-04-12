@@ -68,8 +68,8 @@ function! s:MoveLinesDown()
 endfunction
 nnoremap <silent> <c-j> :<c-u>call <SID>MoveLinesDown()<CR>
 
-" Paste buffer to sprunge
-command! Sprunge exe ":!cat % | curl -s -F 'sprunge=<-' http://sprunge.us | awk '{print $1\"?" . expand('%:e') . "\"}'"
+" Paste buffer to vpaste
+command! Vpaste exe ":!cat % | curl -s -F 'text=<-' http://vpaste.net | awk '{print $1}'"
 
 " Run ctags and store tags in git folder
 command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --exclude=*.min.* --languages=-javascript,html,sql

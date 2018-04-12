@@ -27,9 +27,7 @@ alias v.cdsitepackages='cdsitepackages'
 alias v.cd='cdvirtualenv'
 alias v.lssitepackages='lssitepackages'
 
-# Paste files to sprunge (includes extensions)
-sprunge() {
-  extension=$(echo $1 | cut -f 2 -d '.')
-  link=$(cat $1 | curl -s -F 'sprunge=<-' http://sprunge.us)
-  echo "$link?$extension"
+# Paste files to vpaste
+vpaste() {
+  echo $(cat $1 | curl -s -F 'text=<-' http://vpaste.net)
 }
