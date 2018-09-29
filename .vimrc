@@ -20,11 +20,14 @@ vnoremap '' xi''<Esc>""P
 nnoremap '' ciw''<Esc>""P
 vnoremap `` xi``<Esc>""P
 nnoremap `` ciw``<Esc>""P
+vnoremap \\ xi['']<Esc>h""P
 nnoremap \\ ciw['']<Esc>h""P
-nnoremap // I//<Esc>
+
+" Search and replace word under the cursor
+:nnoremap \s :%s/\<<C-r><C-w>\>/
 
 " Clear search highlights
-nnoremap ,/ :nohlsearch<CR>
+nnoremap // :nohlsearch<CR>
 
 " Move through wrapped lines
 nnoremap j gj
@@ -76,6 +79,15 @@ command! Vpaste exe ":!cat % | curl -s -F 'text=<-' http://vpaste.net | awk '{pr
 " Run ctags and store tags in git folder
 command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --exclude=*.min.* --languages=-javascript,html,sql
 set tags+=.git/tags
+
+" Vimdiff
+if &diff
+  set diffopt+=iwhite
+  set cursorline
+  colorscheme Tomorrow-Night
+  nnoremap > ]c
+  nnoremap < [c
+endif
 
 " Exclude folders when indexing with ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|lib\|git'
