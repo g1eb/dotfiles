@@ -3,5 +3,6 @@
 	name = g1eb
 [core]
 	editor = vim
+	excludesfile = /Users/gleb/.gitignore
 [push]
 	default = simple

@@ -20,10 +20,12 @@ vnoremap `` xi``<Esc>""P
 nnoremap `` ciw``<Esc>""P
 vnoremap \\ xi['']<Esc>h""P
 nnoremap \\ ciw['']<Esc>h""P
-nnoremap // I//<Esc>
+
+" Search and replace word under the cursor
+:nnoremap \s :%s/\<<C-r><C-w>\>/
 
 " Clear search highlights
-nnoremap ,/ :nohlsearch<CR>
+nnoremap // :nohlsearch<CR>
 
 " Move through wrapped lines
 nnoremap j gj
