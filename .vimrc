@@ -78,6 +78,15 @@ command! Vpaste exe ":!cat % | curl -s -F 'text=<-' http://vpaste.net | awk '{pr
 command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --exclude=*.min.* --languages=-javascript,html,sql
 set tags+=.git/tags
 
+" Vimdiff
+if &diff
+  set diffopt+=iwhite
+  set cursorline
+  colorscheme Tomorrow-Night
+  nnoremap > ]c
+  nnoremap < [c
+endif
+
 " Exclude folders when indexing with ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|lib\|git'
 
