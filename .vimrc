@@ -22,7 +22,7 @@ vnoremap \\ xi['']<Esc>h""P
 nnoremap \\ ciw['']<Esc>h""P
 
 " Search and replace word under the cursor
-:nnoremap \s :%s/\<<C-r><C-w>\>/
+nnoremap \s :%s/\<<C-r><C-w>\>/
 
 " Clear search highlights
 nnoremap // :nohlsearch<CR>
