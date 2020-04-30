@@ -13,8 +13,6 @@ set nowritebackup
 set noswapfile
 set nobackup
 
-inoremap JJ <ESC>
-
 nnoremap ; :
 vnoremap '' xi''<Esc>""P
 nnoremap '' ciw''<Esc>""P
