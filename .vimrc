@@ -71,6 +71,10 @@ function! s:MoveLinesDown()
 endfunction
 nnoremap <silent> <c-j> :<c-u>call <SID>MoveLinesDown()<CR>
 
+" Execute current line in shell
+command! RunLine :exec '!'.getline('.')
+command! RunFile :.w !bash
+
 " Paste buffer to vpaste
 command! Vpaste exe ":!cat % | curl -s -F 'text=<-' http://vpaste.net | awk '{print $1}'"
 
