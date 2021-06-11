@@ -12,6 +12,7 @@ set backspace=indent,eol,start
 set nowritebackup
 set noswapfile
 set nobackup
+set cc=80
 
 nnoremap ; :
 vnoremap '' xi''<Esc>""P
