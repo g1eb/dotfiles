@@ -76,6 +76,9 @@ command! Tabe :exec ":tabe"
 command! RunLine :exec '!'.getline('.')
 command! RunFile :.w !bash
 
+" Expand minified json to human-readable form
+command! ExpandJSON :exec ":%!python -m json.tool"
+
 " Paste buffer to vpaste
 command! Vpaste exe ":!cat % | curl -s -F 'text=<-' http://vpaste.net | awk '{print $1}'"
 
