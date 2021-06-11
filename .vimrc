@@ -37,9 +37,6 @@ cnoremap § <Esc>
 inoremap § <Esc>
 vnoremap § <Esc>
 
-syntax on
-filetype plugin indent on
-
 " Remove trailing space on write
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -128,3 +125,6 @@ runtime! autoload/pathogen.vim
 if exists("*pathogen#infect")
   execute pathogen#infect()
 endif
+
+syntax on
+filetype plugin indent on
