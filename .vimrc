@@ -72,6 +72,9 @@ function! s:MoveLinesDown()
 endfunction
 nnoremap <silent> <c-j> :<c-u>call <SID>MoveLinesDown()<CR>
 
+" Execute Tabe as tabe
+command! Tabe :exec ":tabe"
+
 " Execute current line in shell
 command! RunLine :exec '!'.getline('.')
 command! RunFile :.w !bash
