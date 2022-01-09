@@ -18,3 +18,5 @@
   interactive = auto
   pager = true
   ui = true
+[pull]
+  rebase = false
