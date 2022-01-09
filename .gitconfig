@@ -1,13 +1,13 @@
 [user]
-	email = mail@g1eb.com
-	name = g1eb
+  email = mail@g1eb.com
+  name = g1eb
 [core]
-	editor = vim
-	excludesfile = /Users/gleb/.gitignore
+  editor = vim
+  excludesfile = /Users/gleb/.gitignore
 [push]
-	default = simple
+  default = simple
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
