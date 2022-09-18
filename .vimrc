@@ -37,6 +37,11 @@ cnoremap § <Esc>
 inoremap § <Esc>
 vnoremap § <Esc>
 
+" Map ` key to <Esc> [ipad version of the §] :/
+cnoremap ` <Esc>
+inoremap ` <Esc>
+vnoremap ` <Esc>
+
 " Remove trailing space on write
 autocmd BufWritePre * :%s/\s\+$//e
 
