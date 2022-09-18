@@ -122,10 +122,13 @@ function! ToggleVExplorer()
       let t:expl_buf_num = bufnr("%")
   endif
 endfunction
-let g:netrw_list_hide= '.*\.swp$'
-let g:netrw_browse_split = 4
-let g:netrw_liststyle=3
-let g:netrw_altv = 1
+
+" Tweaks for file browsing
+let g:netrw_banner = 0 " disable the banner
+let g:netrw_list_hide = '.*\.swp$' " hide swap files
+let g:netrw_browse_split = 4 " open in prior window
+let g:netrw_liststyle = 3 " tree view
+let g:netrw_altv = 1 " open splits to the right
 map <silent> §§ :call ToggleVExplorer()<CR>
 
 " Add pathogen to runtime path
