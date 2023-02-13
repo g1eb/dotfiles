@@ -17,6 +17,7 @@ screen -t screen-2
 # Run tab specific commands
 select 1
 stuff "eval $(ssh-agent -s)^M"
+stuff "eval $(conda shell.bash hook)^M"
 
 # Bind hjkl to switch between windows
 bind h focus left
