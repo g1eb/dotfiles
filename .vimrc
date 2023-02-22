@@ -72,6 +72,10 @@ function! s:MoveLinesDown()
 endfunction
 nnoremap <silent> <c-j> :<c-u>call <SID>MoveLinesDown()<CR>
 
+" Execute Wq/qw as wq
+command! Wq :exec ":wq"
+command! qw :exec ":wq"
+
 " Execute Tabe as tabe
 command! Tabe :exec ":tabe"
 
