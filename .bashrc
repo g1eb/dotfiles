@@ -1,3 +1,8 @@
+# Load bash aliases
+if [ -f ~/.bash_aliases ]; then
+   source ~/.bash_aliases
+fi
+
 # Default editor
 export EDITOR=vim
 
