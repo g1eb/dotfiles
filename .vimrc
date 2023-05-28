@@ -92,6 +92,9 @@ command! Vpaste exe ":!cat % | curl -s -F 'text=<-' http://vpaste.net | awk '{pr
 command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --exclude=*.min.* --languages=-javascript,html,sql
 set tags+=.git/tags
 
+" Add specific comment to disable eslint checking the current line
+command! DisableESLint normal! O// eslint-disable-next-line<Esc>j0
+
 " Vimdiff
 if &diff
   set diffopt+=iwhite
