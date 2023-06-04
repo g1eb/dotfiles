@@ -93,7 +93,7 @@ command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --
 set tags+=.git/tags
 
 " Add specific comment to disable eslint checking the current line
-command! DisableESLint normal! O// eslint-disable-next-line<Esc>j0
+command! ESLintShush normal! O// eslint-disable-next-line<Esc>j0
 
 " Vimdiff
 if &diff
