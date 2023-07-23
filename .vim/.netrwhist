@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/gleb/knic/knic-companion/app/src/components'
+let g:netrw_dirhist_6='/Users/gleb/venice'
+let g:netrw_dirhist_5='/Users/gleb/venice/venice-peer'
+let g:netrw_dirhist_4='/Users/gleb/knic/knic-companion/app/src/views/TA_D'
+let g:netrw_dirhist_3='/Users/gleb/knic/knic-companion/app/src/views/TA_C'
+let g:netrw_dirhist_2='/Users/gleb/knic/knic-companion/app/src/views'
+let g:netrw_dirhist_1='/Users/gleb/knic/knic-companion/app/src/components'
+let g:netrw_dirhist_0='/Users/gleb/knic/knic-companion/app/src'
+let g:netrw_dirhist_9='/Users/gleb/knic/knic-companion/app'
+let g:netrw_dirhist_8='/Users/gleb/knic/knic-jupyter/dist'
