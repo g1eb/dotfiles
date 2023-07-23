@@ -92,6 +92,9 @@ command! Vpaste exe ":!cat % | curl -s -F 'text=<-' http://vpaste.net | awk '{pr
 command! Retag :!ctags --tag-relative --extra=+f -Rf .git/tags --exclude=.git --exclude=*.min.* --languages=-javascript,html,sql
 set tags+=.git/tags
 
+" Wrap commit messages after 72 characters
+au FileType gitcommit setlocal tw=80
+
 " Add specific comment to disable eslint checking the current line
 command! ESLintShush normal! O// eslint-disable-next-line<Esc>j0
 
