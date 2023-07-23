@@ -53,3 +53,6 @@ _makefile_completions()
     }
 
 complete -o nospace -F _makefile_completions make
+
+# enable key repeats in macos
+defaults write md.obsidian ApplePressAndHoldEnabled -bool false
