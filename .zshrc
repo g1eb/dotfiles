@@ -18,6 +18,15 @@ export DOCKER_DEFAULT_PLATFORM=linux/amd64
 LS_COLORS=$LS_COLORS:'di=0;93:'; export LS_COLORS
 PS1="%{$(tput setaf 11)%}%n@%m:%~ $ %{$(tput sgr0)%}"
 
+# Make fg work like it does in bash
+fg() {
+    if [[ $# -eq 1 && $1 = - ]]; then
+        builtin fg %-
+    else
+        builtin fg %"$@"
+    fi
+}
+
 # Paste files to vpaste
 vpaste() {
   echo $(cat $1 | curl -s -F 'text=<-' http://vpaste.net)
