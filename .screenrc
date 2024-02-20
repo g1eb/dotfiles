@@ -13,6 +13,8 @@ utf8 on
 screen -t screen-0
 screen -t screen-1
 screen -t screen-2
+screen -t screen-3
+screen -t screen-4
 
 # Run tab specific commands
 select 0
@@ -22,6 +24,12 @@ select 1
 stuff "eval \"$(ssh-agent -s)\"^M"
 stuff "eval \"$(conda shell.bash hook)\"^M"
 select 2
+stuff "eval \"$(ssh-agent -s)\"^M"
+stuff "eval \"$(conda shell.bash hook)\"^M"
+select 3
+stuff "eval \"$(ssh-agent -s)\"^M"
+stuff "eval \"$(conda shell.bash hook)\"^M"
+select 4
 stuff "eval \"$(ssh-agent -s)\"^M"
 stuff "eval \"$(conda shell.bash hook)\"^M"
 
