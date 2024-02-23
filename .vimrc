@@ -32,10 +32,15 @@ nnoremap // :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
 
-" Map § key to <Esc>
-cnoremap § <Esc>
-inoremap § <Esc>
-vnoremap § <Esc>
+" Map § key to `
+cnoremap § `
+inoremap § `
+vnoremap § `
+
+" Map Shift + § key to ~
+cnoremap <S-§> ~
+inoremap <S-§> ~
+vnoremap <S-§> ~
 
 " Map jj to <Esc> [ipad version of the §] :/
 inoremap jj <Esc>
