@@ -173,9 +173,9 @@ function! InsertNewSlide()
         \ l:indent . '  <h3></h3>',
         \ l:indent . '  <br />',
         \ l:indent . '',
-        \ l:indent . '  <p></p>',
-        \ l:indent . '  <p></p>',
-        \ l:indent . '  <p></p>',
+        \ l:indent . '  <p class="fragment"></p>',
+        \ l:indent . '  <p class="fragment"></p>',
+        \ l:indent . '  <p class="fragment"></p>',
         \ l:indent . '</section>',
         \ l:indent . ''
         \ ]
