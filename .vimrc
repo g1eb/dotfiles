@@ -216,3 +216,33 @@ function! InsertPre()
   call cursor(l:line + 2, 0)
   normal! f>a
 endfunction
+
+
+" Insert an iframe with slido in it
+command! Slido call InsertSlido()
+
+function! InsertSlido()
+  " Start at current line and search upward for the first non-blank line
+  let lnum = prevnonblank(line('.') - 1)
+  let l:indent = matchstr(getline(lnum), '^\s*')
+
+  " Get current line for insertion
+  let l:line = line('.')
+
+  " Create the slide with the detected indentation
+  let l:slide = [
+        \ l:indent . '',
+        \ l:indent . '<section>',
+        \ l:indent . '  <h3></h3>',
+        \ l:indent . '  <iframe src="" width="100%" height="600" frameborder="0"></iframe>',
+        \ l:indent . '</section>',
+        \ l:indent . ''
+        \ ]
+
+  " Insert lines
+  call append(l:line - 1, l:slide)
+
+  " Move cursor to <h3> line and jump inside
+  call cursor(l:line + 2, 0)
+  normal! f>a
+endfunction
