@@ -154,7 +154,8 @@ filetype plugin indent on
 
 
 
-" Insert a new 'empty' reveal.js slide
+" Insert a new empty reveal.js slide
+command! Slide call InsertNewSlide()
 command! NewSlide call InsertNewSlide()
 
 function! InsertNewSlide()
