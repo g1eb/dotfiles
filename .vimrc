@@ -187,3 +187,32 @@ function! InsertNewSlide()
   call cursor(l:line + 2, 0)
   normal! f>a
 endfunction
+
+
+" Insert a <pre></pre> bit in reveal.js style
+command! Pre call InsertPre()
+
+function! InsertPre()
+  " Start at current line and search upward for the first non-blank line
+  let lnum = prevnonblank(line('.') - 1)
+  let l:indent = matchstr(getline(lnum), '^\s*')
+
+  " Get current line for insertion
+  let l:line = line('.')
+
+  " Create the slide with the detected indentation
+  let l:slide = [
+        \ l:indent . '',
+        \ l:indent . '<pre class="fragment"><code class="hljs python" data-line-numbers data-trim contenteditable>',
+        \ l:indent . '',
+        \ l:indent . '</code></pre>',
+        \ l:indent . ''
+        \ ]
+
+  " Insert lines
+  call append(l:line - 1, l:slide)
+
+  " Move cursor to <h3> line and jump inside
+  call cursor(l:line + 2, 0)
+  normal! f>a
+endfunction
