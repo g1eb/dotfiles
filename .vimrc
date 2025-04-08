@@ -218,10 +218,10 @@ function! InsertPre()
 endfunction
 
 
-" Insert an iframe with slido in it
-command! Slido call InsertSlido()
+" Insert a slide with an img tag
+command! Img call InsertImg()
 
-function! InsertSlido()
+function! InsertImg()
   " Start at current line and search upward for the first non-blank line
   let lnum = prevnonblank(line('.') - 1)
   let l:indent = matchstr(getline(lnum), '^\s*')
@@ -234,7 +234,7 @@ function! InsertSlido()
         \ l:indent . '',
         \ l:indent . '<section>',
         \ l:indent . '  <h3></h3>',
-        \ l:indent . '  <iframe src="" width="100%" height="600" frameborder="0"></iframe>',
+        \ l:indent . '  <img src="" />',
         \ l:indent . '</section>',
         \ l:indent . ''
         \ ]
