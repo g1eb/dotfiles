@@ -187,10 +187,10 @@ function! InsertNewSlide()
 endfunction
 
 
-" Insert a <pre></pre> bit in reveal.js style
-command! Pre call InsertPre()
+" Insert a <pre><code></code></pre> bit in reveal.js style
+command! Code call InsertCode()
 
-function! InsertPre()
+function! InsertCode()
   " Start at current line and search upward for the first non-blank line
   let lnum = prevnonblank(line('.') - 1)
   let l:indent = matchstr(getline(lnum), '^\s*')
