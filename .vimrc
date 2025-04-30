@@ -187,7 +187,7 @@ function! InsertNewSlide()
 endfunction
 
 
-" Insert a <pre><code></code></pre> bit in reveal.js style
+" Insert an empty anchor tag in reveal.js style
 command! Anchor call InsertAnchor()
 
 function! InsertAnchor()
